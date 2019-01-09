@@ -1,0 +1,81 @@
+
+.modal {
+  padding:35px;
+  width: 420px;
+  border-top: 15px solid #f8d378;
+  border-bottom: 15px solid #f032fa;
+  position: relative;
+  max-height: none !important;
+
+  .closeIcon {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+
+    &:before {
+      content:"";
+      display: block;
+      width:3px;
+      height:30px;
+      background: $white;
+      position: absolute;
+      top:-1px; 
+      left:12px;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      content:"";
+      display: block;
+      width:3px;
+      height:30px;
+      background: $white;
+      position: absolute;
+      top:-1px; 
+      left:12px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &:after {
+    content:"";
+    width: 15px;
+    display:block;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    background:linear-gradient(#f8d378, #f032fa);
+  }
+
+  &:before {
+    content:"";
+    width: 15px;
+    display:block;
+    height: 100%;
+    position: absolute;
+    top:0;
+    right:0;
+    background:linear-gradient(#f8d378, #f032fa);
+  }
+
+  &Title {
+    color: $white;
+    font-family: 'Oswald', sans-serif;
+    font-size:36px;
+  }
+
+  &Text {
+    font-family: 'Roboto', sans-serif;
+    color: $white;
+    font-weight: 200;
+  }
+}
+
+.custombox-overlay {
+  background: linear-gradient(to top, #1b32fa, #281ca5) !important;
+  opacity: .9 !important;
+}

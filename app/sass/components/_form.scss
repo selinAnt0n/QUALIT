@@ -1,0 +1,33 @@
+.form {
+  width: 100%;
+
+  &Row {
+    margin-bottom: 20px;
+  }
+
+  &Label {
+    color: $white;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 10px;
+    text-transform: uppercase;
+  }
+
+  &Input {
+    padding: 20px;
+    width: 100%;
+    background: rgba(40,28,165, .8);
+    border:none;
+    font-family: 'PT Sans', sans-serif;
+    font-style: italic;
+    outline:none;
+    color: #fff;
+
+    &:focus {
+      background: rgba(40,28,165, 1);
+      font-style: normal ;
+    }
+  }
+}

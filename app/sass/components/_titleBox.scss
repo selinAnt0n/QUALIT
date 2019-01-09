@@ -1,0 +1,40 @@
+.title {
+    &Box {
+        width:100%;
+        min-height: 362px;
+        background: url(../../img/bg-title.jpg) 50% no-repeat;
+        @include flexible(row, center, center);
+        @extend #media;  
+    }
+    
+    &Item {
+        font-size: 77px;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        font-weight:700;
+        position: relative;
+        color:$blue;
+
+        &-1 {
+            top: -34px;
+            right: -45px;
+            @extend #media; 
+        }
+        &-2 {
+            top:30px;
+            right: -64px;
+            @extend #media; 
+        }
+        &-3 {
+            top:30px;
+            letter-spacing: 7px;
+            right: -5px;
+            justify-content: flex-end;
+            @extend #media; 
+        }
+    }
+
+    &-low {
+        font-size: 56px;
+    }
+}

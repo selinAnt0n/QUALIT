@@ -1,0 +1,107 @@
+@for $i from 0 through 2 {
+    .ml-#{$i} {
+        margin-left:$i * 10px;
+    }
+}
+
+@for $i from 0 through 2 {
+    .mr-#{$i} {
+        margin-right:$i * 10px;
+    }
+}
+
+@for $i from 0 through 2 {
+    .mt-#{$i} {
+        margin-top:$i * 10px;
+    }
+}
+
+@for $i from 0 through 2 {
+    .mb-#{$i} {
+        margin-bottom:$i * 10px;
+    }
+}
+
+
+@for $i from 0 through 2 {
+    .pb-#{$i} {
+        padding-bottom:$i * 10px;
+    }
+}
+
+
+@for $i from 0 through 2 {
+    .pl-#{$i} {
+        padding-left:$i * 10px;
+    }
+}
+
+
+@for $i from 0 through 2 {
+    .pr-#{$i} {
+        padding-right:$i * 10px;
+    }
+}
+
+@for $i from 0 through 2 {
+    .pt-#{$i} {
+        padding-top:$i * 10px;
+    }
+}
+
+@mixin flexible($flex-direction, $alignV, $alignG) {
+	display: flex;
+	flex-direction: $flex-direction;
+	justify-content: $alignV;
+	align-items: $alignG;
+}
+
+@for $i from 0 through 2 {
+    .flex-#{$i} {
+        flex: $i;
+    }
+}
+
+#media{
+	@media (max-width: $mediaSecond) {
+        top:0 !important;
+        right:0 !important;
+        flex-direction: column !important;
+        padding-left:10px !important;
+        padding-right:10px !important;
+        margin-left:0 !important;
+        margin-right:0 !important;
+        width: 100% !important;
+    }
+}
+
+
+.flex {
+    @include flexible(row,center,center);
+
+    &-r {
+        @include flexible(row,center,center);
+    }
+    
+    &-c {
+        @include flexible(column,center,center);
+    }
+}
+
+.text {
+    &-center {
+        text-align: center;
+    }
+
+    &-left {
+        text-align: left;
+    }
+
+    &-right {
+        text-align: right;
+    }
+}
+
+.hidden {
+    display: none;
+}

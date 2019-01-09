@@ -1,0 +1,20 @@
+.list {
+  	width: 80%;
+  	align-items: flex-start;
+  	justify-content: space-between;
+  	@extend #media;
+
+  	&-item {
+  		@media (max-width: 1200px) {
+			margin-bottom: 20px;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+  	}
+
+  	@media (max-width: $mediaSecond) {
+		justify-content: center;
+		align-items: center;
+	}
+}

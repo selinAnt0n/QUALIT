@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="description" content="">
+		<link rel="icon" href="favicon.ico" type="image/ico">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+		 crossorigin="anonymous">
+	</head>
+	<body>
+		<noscript>You don`t using javascript.</noscript>
+		<!--[if lt IE 8]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<div class="wrapper">
+			<div class="flex-2 pt-2 wrapper-l pt-2">
+				<div class="row flex-r header mb-2">
+					<a
+						href="#"
+						class="logo">
+						<img
+							src="./img/logo.jpg"
+							alt="logo"
+						/>
+					</a>
+					<div class="flex">
+						<a href="#" class="socialItem flex">
+							<i class="fab fa-instagram"></i>
+						</a>
+						<a href="#" class="socialItem flex">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+						<button class="btn" id="contactUs">Contant Us</button>
+					</div>
+				</div>
+				<div class="row titleBox mb-2 pb-2">
+					<div class="flex-1">
+						<span class="titleItem titleItem-1 title-low flex-r">launching</span>
+					</div>
+					<div class="flex-1">
+						<span class="titleItem titleItem-2 flex-r start">soon</span>
+					</div>
+					<div class="flex-1">
+						<span class="titleItem titleItem-3 flex-r start">...</span>
+					</div>
+				</div>
+				<div class="row textBox">
+					<h3 class="title">Something awesome is in the works</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+					aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<div class="row textBox">
+					<h3 class="title">Ready to use</h3>
+					<p>You can buy high quality trendy vector illustrations and design templates for your business, made by our team:</p>
+				</div>
+				<div class="list flex-r mb-2 pb-2">
+					<a href="#" class="list-item">
+						<img
+							src="./img/shutterstock.jpg"
+							alt="#"
+						>
+					</a>
+					<a href="#" class="list-item">
+						<img
+							src="./img/stocks-vector-logo-5.jpg"
+							alt="#"
+						/>
+					</a>
+				</div>
+			</div>
+			<div class="flex-2 wrapper-r">
+			</div>
+		</div>
+
+		<div class="modal modalContact hidden">
+			<div class="closeIcon">	
+			</div>
+			<div class="modalInner flex-c">	
+				<div class="error"></div>
+				<h3 class="uppercase modalTitle">Contact Us</h3>
+				<div 
+					id="form" 
+					class="form">
+					<div class="formRow flex-c">
+						<label class="formLabel" for="">Your <strong>Name</strong></label>
+						<input 
+							class="formInput"
+							type="text" 
+							placeholder="Please enter your Name"
+							name="name"
+						/>
+					</div>
+					<div class="formRow flex-c">
+						<label 
+							class="formLabel" 
+							for=""
+						>Your <strong>Email</strong></label>
+						<input 
+							class="formInput"
+							type="text" 
+							placeholder="Please enter your email"
+							name="email"
+						/>
+					</div>
+
+					<div class="formRow flex-c">
+						<label
+							class="formLabel" 
+							for=""
+						>Your <strong>message</strong></label>
+						<textarea 
+							class="formInput"
+							placeholder="Your message"
+							name="message"
+						></textarea>
+					</div>
+					<button class="btn btnFull uppercase contactSubmit">Send message</button>
+				</div>
+			</div>
+		</div>
+		<div class="modal modalSuccess hidden">
+			<div class="closeIcon">	
+			</div>
+			<div class="modalInner flex-c">
+				<h3 class="uppercase modalTitle">Success</h3>
+				<div class="icon success"></div>
+				<p class="modalText text-center">Thank you for your message. We will respond as soon as possible.</p>
+			</div>
+		</div>
+		<script src="js/custombox.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

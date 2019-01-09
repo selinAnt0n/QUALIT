@@ -1,0 +1,10 @@
+.header {
+    justify-content: space-between;
+    @extend #media;
+}
+
+.logo {
+	@media (max-width: $mediaSecond) {
+		margin-bottom: 20px;
+	}
+}
