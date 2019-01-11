@@ -51,7 +51,7 @@ gulp.task('watch', ['sync', 'sass', 'moveStatic', 'jsBuild', 'static'], function
 	gulp.watch('app/js/*.js', ['static']);
 });
 
-gulp.task('build', function () {
+gulp.task('build', ['jsBuild', 'static'] ,function () {
 	gulp.src('app/sass/**/*.scss')
 		.pipe(sass())
 		.pipe(cssmin())

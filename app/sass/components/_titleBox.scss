@@ -2,7 +2,7 @@
     &Box {
         width:100%;
         min-height: 362px;
-        background: url(../../img/bg-title.jpg) 50% no-repeat;
+        background: url(../img/bg-title.jpg) 50% no-repeat;
         @include flexible(row, center, center);
         @extend #media;  
     }

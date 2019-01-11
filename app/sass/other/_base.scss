@@ -39,7 +39,7 @@ a {
   @include flexible(row,center,center);
   margin: 0 auto;
   overflow:hidden;
-  background: url(../../img/right-bg-1.jpg) repeat;
+  background: url(../img/right-bg-1.jpg) repeat;
 
 	&-l {
 	    max-width: 660px;
