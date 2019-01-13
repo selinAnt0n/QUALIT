@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
 		 crossorigin="anonymous">
+		 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	</head>
 	<body>
 		<noscript>You don`t using javascript.</noscript>
@@ -92,6 +93,7 @@
 							type="text" 
 							placeholder="Please enter your Name"
 							name="name"
+							required="required"
 						/>
 					</div>
 					<div class="formRow flex-c">
@@ -101,9 +103,10 @@
 						>Your <strong>Email</strong></label>
 						<input 
 							class="formInput"
-							type="text" 
+							type="email" 
 							placeholder="Please enter your email"
 							name="email"
+							required="required"
 						/>
 					</div>
 
@@ -116,6 +119,7 @@
 							class="formInput"
 							placeholder="Your message"
 							name="message"
+							required="required"
 						></textarea>
 					</div>
 					<button class="btn btnFull uppercase contactSubmit">Send message</button>

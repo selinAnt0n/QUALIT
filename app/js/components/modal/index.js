@@ -52,11 +52,14 @@ const contactUsBtn = document.querySelector('#contactUs');
 				var errorElement = document.querySelector('.error');
 
 				submitBtn.addEventListener('click', () => {
-					fetch("/", {
-					  method: "POST",
+					fetch("https://codeit.pro/kalenyukk/test/front/send.php", {
+						method: "POST",
+						headers: {
+							'Content-Type': 'application/x-www-form-urlencoded',
+						},
 					  body: JSON.stringify(contactUsForm)
 					}).then((response) => {
-						if (response.status === 'error') {							
+						if (response.status >= 400) {							
 							errorElement.innerHTML = response.errorText;
 						} else {
 							errorElement.innerHTML = '';
