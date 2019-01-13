@@ -32,13 +32,17 @@ try {
     ];
     $feedback = Feedback::create($feedbackData);
 
+
+    $emailBody = "<b>Name: </b>" . $feedback->name . "<br><b>Email: </b>". $feedback->email  . "<br><b>Content: </b>" . $feedback->message  . '<br>';
     $transport = new Transport();
     $mailer    = new Mailer($transport);
     $email     = new Email();
     $email->setSubject('Test Subject');
-    $email->setFrom(['test@localhost' => 'John Doe']);
+    $email->setFrom(['test@localhost' => 'notifier']);
     $email->setTo([$config['app']['admin_email']]);
-    $email->setBody(json_encode($feedback), null, 'UTF-8');
+    $email->setBody($emailBody, null, 'UTF-8');
+    $email->setCharset('utf-8');
+    $email->setContentType("text/html");
 
     $mailer->send($email);
     return jsonResponse($feedback, 201);
