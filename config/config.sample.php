@@ -2,16 +2,16 @@
 
 return [
     'db' => [
-        'host'     => 'codeit.pro',
-        'user'     => 'ifix',
-        'password' => 'ifix',
+        'host'     => 'localhost',
+        'user'     => 'username',
+        'password' => 'password',
         'port'     => 3306,
-        'database' => 'kdn-test',
+        'database' => 'db_name',
     ],
     'app' => [
-        'admin_email' => 'valters96@gmail.com',
+        'admin_email' => 'user@example.com',
         'timezone'     => 'Europe/Kiev',
-        'mail'         => [
+        'mail'        => [
             'address'  => 'notify@qualit-design.com',
             'name'     => 'Qualit Feedback',
             'subject'  => 'New Feedback'

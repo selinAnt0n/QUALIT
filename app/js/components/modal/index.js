@@ -52,7 +52,7 @@ const contactUsBtn = document.querySelector('#contactUs');
 				var errorElement = document.querySelector('.error');
 
 				submitBtn.addEventListener('click', () => {
-					fetch("https://codeit.pro/kalenyukk/test/front/send.php", {
+					fetch("../send.php", {
 						method: "POST",
 						headers: {
 							'Content-Type': 'application/x-www-form-urlencoded',
@@ -60,7 +60,7 @@ const contactUsBtn = document.querySelector('#contactUs');
 					  body: JSON.stringify(contactUsForm)
 					}).then((response) => {
 						if (response.status >= 400) {							
-							errorElement.innerHTML = response.errorText;
+							errorElement.innerHTML = "Please, fill all fields";
 						} else {
 							errorElement.innerHTML = '';
 							Custombox.modal.closeAll();

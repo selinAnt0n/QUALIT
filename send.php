@@ -9,6 +9,7 @@ use Swift_Message as Email;
 use Illuminate\Database\Capsule\Manager as Eloquent;
 use Rakit\Validation\Validator;
 
+error_reporting(0);
 if (strtoupper($_SERVER['REQUEST_METHOD']) != "POST") {
     http_response_code(405);
     throw new \Exception('Unavailable HTTP Method', 405);
@@ -37,8 +38,9 @@ try {
     $transport = new Transport();
     $mailer    = new Mailer($transport);
     $email     = new Email();
-    $email->setSubject('Test Subject');
-    $email->setFrom(['test@localhost' => 'notifier']);
+    $mailConfig = $config['app']['mail'];
+    $email->setSubject($mailConfig['subject']);
+    $email->setFrom([$mailConfig['address'] => $mailConfig['name']]);
     $email->setTo([$config['app']['admin_email']]);
     $email->setBody($emailBody, null, 'UTF-8');
     $email->setCharset('utf-8');
@@ -47,7 +49,7 @@ try {
     $mailer->send($email);
     return jsonResponse($feedback, 201);
 } catch (\Throwable $e) {
-    return jsonResponse($e, 500);
+    return jsonResponse($e->getMessage(), 500);
 }
 
 function jsonResponse($data, $statusCode = 200)
