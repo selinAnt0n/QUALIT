@@ -52,8 +52,7 @@ function addSubmitEvent() {
 	var errorElement = document.querySelector('.error');
 
 	submitBtn.addEventListener('click', () => {
-		// ../send.php
-		fetch("https://jsonplaceholder.typicode.com/todos/1", {
+		fetch("../send.php", {
 			method: "POST",
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded',
@@ -62,8 +61,9 @@ function addSubmitEvent() {
 		}).then((response) => {
 			errorElement.innerHTML = "";
 			
-			if (response.status >= 400) {							
-				response.json().then(({errors}) => errorElement.innerHTML = makeErrors(errors));
+			if (response.status >= 400) {
+				errorElement.innerHTML = "Fill all fields, please";
+				//response.json().then(({errors}) => errorElement.innerHTML = makeErrors(errors));
 			} else {
 				errorElement.innerHTML = '';
 				Custombox.modal.closeAll();
